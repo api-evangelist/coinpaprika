@@ -1,0 +1,32 @@
+aid: coinpaprika
+name: Coinpaprika
+description: "Cryptocurrencies prices, volume and more"
+url: https://api.coinpaprika.com
+specificationVersion: '0.20'
+created: '2026-05-28'
+modified: '2026-05-28'
+x-source: public-apis/public-apis
+x-category: "Cryptocurrency"
+x-tier: 3
+x-tier-reason: bulk-registered-from-public-apis
+tags:
+  - Cryptocurrency
+  - Public APIs
+apis:
+  - name: Coinpaprika
+    description: "Cryptocurrencies prices, volume and more"
+    humanURL: https://api.coinpaprika.com
+    baseURL: https://api.coinpaprika.com
+    tags:
+      - Cryptocurrency
+    properties:
+      - type: Documentation
+        url: https://api.coinpaprika.com
+common:
+  - type: Website
+    url: https://api.coinpaprika.com
+  - type: PublicAPIsListing
+    url: https://github.com/public-apis/public-apis
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
