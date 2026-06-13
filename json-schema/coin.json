@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api.coinpaprika.com/v1/schemas/coin",
+  "title": "Coin",
+  "description": "Basic cryptocurrency coin information.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique coin identifier",
+      "example": "btc-bitcoin"
+    },
+    "name": {
+      "type": "string",
+      "description": "Coin name",
+      "example": "Bitcoin"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Coin ticker symbol",
+      "example": "BTC"
+    },
+    "rank": {
+      "type": "integer",
+      "description": "Market cap rank",
+      "example": 1
+    },
+    "is_new": {
+      "type": "boolean",
+      "description": "If currency was added within last 5 days",
+      "example": false
+    },
+    "is_active": {
+      "type": "boolean",
+      "description": "If currency is actively traded",
+      "example": true
+    }
+  }
+}

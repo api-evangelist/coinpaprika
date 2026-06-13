@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api.coinpaprika.com/v1/schemas/global",
+  "title": "Global",
+  "description": "Global cryptocurrency market statistics.",
+  "type": "object",
+  "properties": {
+    "market_cap_usd": {
+      "type": "number",
+      "description": "Total global cryptocurrency market capitalization in USD",
+      "example": 430252937008
+    },
+    "volume_24h_usd": {
+      "type": "number",
+      "description": "Total 24-hour trading volume across all cryptocurrencies in USD",
+      "example": 430252937008
+    },
+    "bitcoin_dominance_percentage": {
+      "type": "number",
+      "description": "Bitcoin market cap as a percentage of total crypto market cap",
+      "example": 36.67
+    },
+    "cryptocurrencies_number": {
+      "type": "integer",
+      "description": "Total number of tracked cryptocurrencies",
+      "example": 1587
+    },
+    "last_updated": {
+      "type": "integer",
+      "description": "Unix timestamp of last update (seconds)",
+      "example": 1525089441
+    }
+  }
+}

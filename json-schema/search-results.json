@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api.coinpaprika.com/v1/schemas/search-results",
+  "title": "SearchResults",
+  "description": "Results from a search query across currencies, ICOs, exchanges, people, and tags.",
+  "type": "object",
+  "properties": {
+    "currencies": {
+      "type": "array",
+      "description": "Matched cryptocurrency coins",
+      "items": {
+        "$ref": "coin.json"
+      }
+    },
+    "icos": {
+      "type": "array",
+      "description": "Matched ICO projects",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique ICO identifier",
+            "example": "fil-filecoin-futures"
+          },
+          "name": {
+            "type": "string",
+            "description": "ICO name",
+            "example": "Filecoin"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "ICO ticker symbol",
+            "example": "FIL"
+          },
+          "is_new": {
+            "type": "boolean",
+            "description": "If ICO was added within last 5 days",
+            "example": false
+          }
+        }
+      }
+    },
+    "exchanges": {
+      "type": "array",
+      "description": "Matched cryptocurrency exchanges",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique exchange identifier",
+            "example": "binance"
+          },
+          "name": {
+            "type": "string",
+            "description": "Exchange name",
+            "example": "Binance"
+          },
+          "rank": {
+            "type": "integer",
+            "description": "Exchange rank by volume",
+            "example": 1
+          }
+        }
+      }
+    },
+    "people": {
+      "type": "array",
+      "description": "Matched people in the crypto space",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique person identifier",
+            "example": "vitalik-buterin"
+          },
+          "name": {
+            "type": "string",
+            "description": "Person full name",
+            "example": "Vitalik Buterin"
+          },
+          "teams_count": {
+            "type": "integer",
+            "description": "Number of teams where person is a member",
+            "example": 5
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Matched category tags",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique tag identifier",
+            "example": "blockchain-service"
+          },
+          "name": {
+            "type": "string",
+            "description": "Tag display name",
+            "example": "Blockchain Service"
+          },
+          "coin_counter": {
+            "type": "integer",
+            "description": "Number of currencies with this tag",
+            "example": 160
+          },
+          "ico_counter": {
+            "type": "integer",
+            "description": "Number of ICOs with this tag",
+            "example": 80
+          }
+        }
+      }
+    }
+  }
+}

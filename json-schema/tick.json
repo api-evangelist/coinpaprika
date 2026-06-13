@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api.coinpaprika.com/v1/schemas/tick",
+  "title": "Tick",
+  "description": "Cryptocurrency ticker data. Missing values are returned as empty string.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique coin identifier",
+      "example": "btc-bitcoin"
+    },
+    "name": {
+      "type": "string",
+      "description": "Coin name",
+      "example": "Bitcoin"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Coin symbol",
+      "example": "BTC"
+    },
+    "rank": {
+      "type": "string",
+      "description": "Market cap rank",
+      "example": "1"
+    },
+    "price_usd": {
+      "type": "string",
+      "description": "Price in USD",
+      "example": "9259.01"
+    },
+    "price_btc": {
+      "type": "string",
+      "description": "Price in BTC",
+      "example": "1"
+    },
+    "volume_24h_usd": {
+      "type": "string",
+      "description": "24-hour trading volume in USD",
+      "example": "8102619999"
+    },
+    "market_cap_usd": {
+      "type": "string",
+      "description": "Market capitalization in USD",
+      "example": "157468557128"
+    },
+    "circulating_supply": {
+      "type": "string",
+      "description": "Circulating supply of the coin",
+      "example": "17007062"
+    },
+    "total_supply": {
+      "type": "string",
+      "description": "Total supply of the coin",
+      "example": "17007062"
+    },
+    "max_supply": {
+      "type": "string",
+      "description": "Maximum supply of the coin",
+      "example": "21000000"
+    },
+    "percent_change_1h": {
+      "type": "string",
+      "description": "Percentage price change over the last 1 hour",
+      "example": "-0.26"
+    },
+    "percent_change_24h": {
+      "type": "string",
+      "description": "Percentage price change over the last 24 hours",
+      "example": "0.22"
+    },
+    "percent_change_7d": {
+      "type": "string",
+      "description": "Percentage price change over the last 7 days",
+      "example": "4.1"
+    },
+    "last_updated": {
+      "type": "string",
+      "description": "Unix timestamp of last update (seconds)",
+      "example": "1525088839"
+    }
+  }
+}

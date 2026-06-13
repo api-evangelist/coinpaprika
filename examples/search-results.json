@@ -1,0 +1,42 @@
+{
+  "currencies": [
+    {
+      "id": "btc-bitcoin",
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "rank": 1,
+      "is_new": false,
+      "is_active": true
+    }
+  ],
+  "icos": [
+    {
+      "id": "fil-filecoin-futures",
+      "name": "Filecoin",
+      "symbol": "FIL",
+      "is_new": false
+    }
+  ],
+  "exchanges": [
+    {
+      "id": "binance",
+      "name": "Binance",
+      "rank": 1
+    }
+  ],
+  "people": [
+    {
+      "id": "vitalik-buterin",
+      "name": "Vitalik Buterin",
+      "teams_count": 5
+    }
+  ],
+  "tags": [
+    {
+      "id": "blockchain-service",
+      "name": "Blockchain Service",
+      "coin_counter": 160,
+      "ico_counter": 80
+    }
+  ]
+}

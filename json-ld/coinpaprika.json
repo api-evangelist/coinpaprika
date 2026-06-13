@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "coinpaprika": "https://api.coinpaprika.com/v1/",
+    "crypto": "https://coinpaprika.com/vocab/",
+    "coin_id": "crypto:coinId",
+    "price_usd": "crypto:priceUsd",
+    "price_btc": "crypto:priceBtc",
+    "volume_24h_usd": "crypto:volume24hUsd",
+    "market_cap_usd": "crypto:marketCapUsd",
+    "circulating_supply": "crypto:circulatingSupply",
+    "total_supply": "crypto:totalSupply",
+    "max_supply": "crypto:maxSupply",
+    "percent_change_1h": "crypto:percentChange1h",
+    "percent_change_24h": "crypto:percentChange24h",
+    "percent_change_7d": "crypto:percentChange7d",
+    "bitcoin_dominance_percentage": "crypto:bitcoinDominancePercentage",
+    "cryptocurrencies_number": "crypto:cryptocurrenciesNumber",
+    "is_new": "crypto:isNew",
+    "is_active": "crypto:isActive",
+    "coin_counter": "crypto:coinCounter",
+    "ico_counter": "crypto:icoCounter",
+    "teams_count": "crypto:teamsCount",
+    "last_updated": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:integer"
+    },
+    "rank": "schema:position",
+    "symbol": "schema:tickerSymbol",
+    "name": "schema:name",
+    "id": "@id",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@type": "WebAPI",
+      "@id": "https://api.coinpaprika.com/v1",
+      "name": "CoinPaprika API",
+      "description": "Free cryptocurrency data REST API providing coin information, exchanges, market data, OHLCV history, ICO data, and global market statistics.",
+      "version": "1.2.1",
+      "url": "https://api.coinpaprika.com/v1",
+      "documentation": "https://docs.coinpaprika.com/",
+      "provider": {
+        "@type": "Organization",
+        "name": "CoinPaprika",
+        "url": "https://coinpaprika.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://coinpaprika.com/api/pricing"
+      }
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://api.coinpaprika.com/v1/global",
+      "httpMethod": "GET",
+      "name": "Get Global Market Information",
+      "description": "Returns global cryptocurrency market statistics including total market cap and Bitcoin dominance.",
+      "urlTemplate": "https://api.coinpaprika.com/v1/global"
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://api.coinpaprika.com/v1/coins",
+      "httpMethod": "GET",
+      "name": "Get All Coins",
+      "description": "Returns all coins listed on CoinPaprika.",
+      "urlTemplate": "https://api.coinpaprika.com/v1/coins"
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://api.coinpaprika.com/v1/ticker",
+      "httpMethod": "GET",
+      "name": "Get Ticker Information for All Coins",
+      "description": "Returns real-time price and market data for all tracked cryptocurrencies.",
+      "urlTemplate": "https://api.coinpaprika.com/v1/ticker"
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://api.coinpaprika.com/v1/ticker/{coin_id}",
+      "httpMethod": "GET",
+      "name": "Get Ticker Information for Specific Coin",
+      "description": "Returns real-time price and market data for a specific cryptocurrency by its ID.",
+      "urlTemplate": "https://api.coinpaprika.com/v1/ticker/{coin_id}"
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://api.coinpaprika.com/v1/search/",
+      "httpMethod": "GET",
+      "name": "Search Cryptocurrencies",
+      "description": "Search for currencies, ICOs, people, exchanges, and tags on CoinPaprika.",
+      "urlTemplate": "https://api.coinpaprika.com/v1/search/?q={q}&c={c}&limit={limit}"
+    }
+  ]
+}

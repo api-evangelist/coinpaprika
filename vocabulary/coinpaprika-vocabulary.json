@@ -1,0 +1,156 @@
+{
+  "vocabulary": {
+    "name": "CoinPaprika API Vocabulary",
+    "description": "Domain terms used in the CoinPaprika cryptocurrency market data API.",
+    "version": "1.2.1",
+    "terms": [
+      {
+        "term": "coin_id",
+        "label": "Coin ID",
+        "description": "Unique slug-style identifier for a cryptocurrency, combining symbol and name (e.g., btc-bitcoin, eth-ethereum).",
+        "type": "string",
+        "example": "btc-bitcoin"
+      },
+      {
+        "term": "symbol",
+        "label": "Symbol",
+        "description": "Short ticker symbol for a cryptocurrency as traded on exchanges.",
+        "type": "string",
+        "example": "BTC"
+      },
+      {
+        "term": "rank",
+        "label": "Rank",
+        "description": "Market capitalization rank of a cryptocurrency, where rank 1 is the highest market cap.",
+        "type": "integer",
+        "example": 1
+      },
+      {
+        "term": "price_usd",
+        "label": "Price (USD)",
+        "description": "Current price of the cryptocurrency denominated in US dollars.",
+        "type": "string",
+        "example": "9259.01"
+      },
+      {
+        "term": "price_btc",
+        "label": "Price (BTC)",
+        "description": "Current price of the cryptocurrency denominated in Bitcoin.",
+        "type": "string",
+        "example": "0.00000001"
+      },
+      {
+        "term": "volume_24h_usd",
+        "label": "24h Volume (USD)",
+        "description": "Total trading volume over the last 24 hours in US dollars.",
+        "type": "string",
+        "example": "8102619999"
+      },
+      {
+        "term": "market_cap_usd",
+        "label": "Market Cap (USD)",
+        "description": "Total market capitalization of the cryptocurrency in US dollars (price * circulating supply).",
+        "type": "string",
+        "example": "157468557128"
+      },
+      {
+        "term": "circulating_supply",
+        "label": "Circulating Supply",
+        "description": "Number of coins currently in circulation and available in the market.",
+        "type": "string",
+        "example": "17007062"
+      },
+      {
+        "term": "total_supply",
+        "label": "Total Supply",
+        "description": "Total number of coins that exist including those not currently in circulation.",
+        "type": "string",
+        "example": "17007062"
+      },
+      {
+        "term": "max_supply",
+        "label": "Max Supply",
+        "description": "Maximum number of coins that will ever exist for this cryptocurrency.",
+        "type": "string",
+        "example": "21000000"
+      },
+      {
+        "term": "percent_change_1h",
+        "label": "1h Price Change (%)",
+        "description": "Percentage change in price over the last 1 hour.",
+        "type": "string",
+        "example": "-0.26"
+      },
+      {
+        "term": "percent_change_24h",
+        "label": "24h Price Change (%)",
+        "description": "Percentage change in price over the last 24 hours.",
+        "type": "string",
+        "example": "0.22"
+      },
+      {
+        "term": "percent_change_7d",
+        "label": "7d Price Change (%)",
+        "description": "Percentage change in price over the last 7 days.",
+        "type": "string",
+        "example": "4.1"
+      },
+      {
+        "term": "last_updated",
+        "label": "Last Updated",
+        "description": "Unix timestamp (seconds) indicating when the data was last refreshed.",
+        "type": "integer",
+        "example": 1525088839
+      },
+      {
+        "term": "bitcoin_dominance_percentage",
+        "label": "Bitcoin Dominance (%)",
+        "description": "Bitcoin's market cap as a percentage of the total cryptocurrency market cap.",
+        "type": "number",
+        "example": 36.67
+      },
+      {
+        "term": "cryptocurrencies_number",
+        "label": "Number of Cryptocurrencies",
+        "description": "Total count of tracked cryptocurrencies in the CoinPaprika database.",
+        "type": "integer",
+        "example": 1587
+      },
+      {
+        "term": "is_new",
+        "label": "Is New",
+        "description": "Boolean flag indicating whether the coin or ICO was added to CoinPaprika within the last 5 days.",
+        "type": "boolean",
+        "example": false
+      },
+      {
+        "term": "is_active",
+        "label": "Is Active",
+        "description": "Boolean flag indicating whether the cryptocurrency is currently actively traded.",
+        "type": "boolean",
+        "example": true
+      },
+      {
+        "term": "coin_counter",
+        "label": "Coin Counter",
+        "description": "Number of cryptocurrencies associated with a given tag.",
+        "type": "integer",
+        "example": 160
+      },
+      {
+        "term": "ico_counter",
+        "label": "ICO Counter",
+        "description": "Number of ICO projects associated with a given tag.",
+        "type": "integer",
+        "example": 80
+      },
+      {
+        "term": "teams_count",
+        "label": "Teams Count",
+        "description": "Number of cryptocurrency project teams a person is a member of.",
+        "type": "integer",
+        "example": 5
+      }
+    ]
+  }
+}
