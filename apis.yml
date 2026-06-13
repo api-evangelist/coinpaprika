@@ -1,32 +1,57 @@
 aid: coinpaprika
-name: Coinpaprika
-description: "Cryptocurrencies prices, volume and more"
-url: https://api.coinpaprika.com
-specificationVersion: '0.20'
-created: '2026-05-28'
-modified: '2026-05-28'
-x-source: public-apis/public-apis
-x-category: "Cryptocurrency"
-x-tier: 3
-x-tier-reason: bulk-registered-from-public-apis
+name: CoinPaprika
+description: Free cryptocurrency data REST API providing coin information, exchanges, market data, OHLCV history, ICO data, and global market statistics for 2,000+ coins on the free tier and 59,000+ assets on paid plans.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/coinpaprika/refs/heads/main/apis.yml
+type: Index
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
 tags:
   - Cryptocurrency
-  - Public APIs
+  - Market Data
+  - Finance
+  - OHLCV
+  - Exchanges
+  - Blockchain
 apis:
-  - name: Coinpaprika
-    description: "Cryptocurrencies prices, volume and more"
-    humanURL: https://api.coinpaprika.com
-    baseURL: https://api.coinpaprika.com
+  - name: CoinPaprika API
+    description: REST API providing real-time and historical cryptocurrency market data including coin prices, OHLCV candlestick data, exchange listings, contract addresses, global market statistics, and ICO information across 59,000+ assets and 360+ exchanges.
+    humanURL: https://docs.coinpaprika.com/
+    baseURL: https://api.coinpaprika.com/v1
     tags:
       - Cryptocurrency
+      - Market Data
+      - OHLCV
+      - Exchanges
     properties:
       - type: Documentation
-        url: https://api.coinpaprika.com
+        url: https://docs.coinpaprika.com/
+      - type: OpenAPI
+        url: https://github.com/coinpaprika/api/blob/master/openapi.yml
 common:
   - type: Website
-    url: https://api.coinpaprika.com
-  - type: PublicAPIsListing
-    url: https://github.com/public-apis/public-apis
+    url: https://coinpaprika.com/
+  - type: Documentation
+    url: https://docs.coinpaprika.com/
+  - type: GitHubOrg
+    url: https://github.com/coinpaprika
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/coinpaprika/
+  - type: Blog
+    url: https://coinpaprika.com/news/
+  - type: Pricing
+    url: https://coinpaprika.com/api/pricing
+  - type: StatusPage
+    url: https://status.coinpaprika.com/
+  - type: X
+    url: https://twitter.com/coinpaprika
+  - type: Plans
+    url: plans/coinpaprika-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/coinpaprika-rate-limits.yml
+  - type: FinOps
+    url: finops/coinpaprika-finops.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

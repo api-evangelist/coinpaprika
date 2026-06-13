@@ -1,0 +1,85 @@
+name: CoinPaprika API Rate Limits
+description: Rate limiting structure for the CoinPaprika API across all subscription plans.
+url: https://coinpaprika.com/api/pricing
+plans:
+  - name: Free
+    monthly_calls: 20000
+    calls_per_second: null
+    assets_available: 2000
+    historical_data: 1 year (daily OHLCV)
+    websockets: false
+    update_interval: standard
+    sla: false
+    support: none
+    commercial_use: false
+    notes: No API key required for basic access. Restricted to personal, non-commercial use. No API mappings endpoint access.
+
+  - name: Starter
+    monthly_calls: 400000
+    calls_per_second: null
+    assets_available: all
+    historical_data: 5 years (daily OHLCV)
+    websockets: false
+    update_interval: standard
+    sla: false
+    support: email
+    commercial_use: true
+    notes: Includes API mappings endpoint and crypto payment option.
+
+  - name: Pro
+    monthly_calls: 1000000
+    calls_per_second: null
+    assets_available: all
+    historical_data: full (13+ years)
+    websockets: false
+    update_interval: standard
+    sla: false
+    support: email
+    commercial_use: true
+    notes: Full historical OHLCV data access. All OHLCV intervals available.
+
+  - name: Business
+    monthly_calls: 5000000
+    calls_per_second: null
+    assets_available: all
+    historical_data: full (13+ years)
+    websockets: false
+    update_interval: up to 3 minutes
+    sla: false
+    support: 24-hour
+    commercial_use: true
+    notes: Enhanced update intervals. Priority support with 24-hour response time.
+
+  - name: Ultimate
+    monthly_calls: 10000000
+    calls_per_second: null
+    assets_available: all
+    historical_data: full (13+ years)
+    websockets: true
+    update_interval: up to 1 minute
+    sla: false
+    support: 24-hour
+    commercial_use: true
+    notes: WebSocket real-time tickers included. Fastest REST update intervals.
+
+  - name: Enterprise
+    monthly_calls: unlimited
+    calls_per_second: custom
+    assets_available: all
+    historical_data: full (13+ years)
+    websockets: true
+    update_interval: real-time
+    sla: true
+    support: real-time (Slack + dedicated)
+    commercial_use: true
+    notes: Dedicated infrastructure, 99.9% uptime SLA, custom rate limits, Slack support channel.
+
+global_limits:
+  - description: The free plan processes up to 20 ticks per second across shared infrastructure.
+    source: https://coinpaprika.com/api/
+  - description: API key authentication is required for paid plans. Free tier is unauthenticated or uses a free API key.
+    source: https://docs.coinpaprika.com/
+  - description: Monthly call quota resets at the start of each billing cycle.
+    source: https://coinpaprika.com/api/pricing
+</content>
+</invoke>

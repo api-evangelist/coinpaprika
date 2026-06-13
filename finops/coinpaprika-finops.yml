@@ -1,0 +1,121 @@
+name: CoinPaprika API Plans & Pricing
+description: Subscription plans for the CoinPaprika cryptocurrency market data API, ranging from a free tier to enterprise with unlimited calls.
+url: https://coinpaprika.com/api/pricing
+plans:
+  - name: Free
+    description: Personal and non-commercial use with limited assets and history. No credit card required.
+    url: https://coinpaprika.com/api/pricing
+    price:
+      amount: 0
+      currency: USD
+      period: month
+    quota:
+      monthly_calls: 20000
+      assets: 2000
+      historical_data: "1 year daily OHLCV"
+    features:
+      - 25+ REST endpoints
+      - Basic ticker data
+      - No API key required
+      - Personal/non-commercial use only
+    limitations:
+      - No API mappings endpoint
+      - No WebSocket access
+      - No SLA
+      - No commercial use
+      - No email support
+
+  - name: Starter
+    description: Entry-level commercial plan for developers and small applications needing extended asset coverage.
+    url: https://coinpaprika.com/api/pricing
+    price:
+      amount: 99
+      currency: USD
+      period: month
+      annual_discount: 10%
+    quota:
+      monthly_calls: 400000
+      assets: all
+      historical_data: "5 years daily OHLCV"
+    features:
+      - All 59,000+ assets
+      - API mappings endpoint
+      - Email support
+      - Crypto payment option
+      - Commercial use permitted
+
+  - name: Pro
+    description: Professional plan with full historical data and 1 million monthly calls.
+    url: https://coinpaprika.com/api/pricing
+    price:
+      amount: 199
+      currency: USD
+      period: month
+      annual_discount: 10%
+    quota:
+      monthly_calls: 1000000
+      assets: all
+      historical_data: "Full 13+ years"
+    features:
+      - Full OHLCV history
+      - All OHLCV intervals
+      - All assets
+      - Email support
+      - Crypto payment option
+
+  - name: Business
+    description: High-volume plan with 5 million monthly calls and faster data update intervals.
+    url: https://coinpaprika.com/api/pricing
+    price:
+      amount: 799
+      currency: USD
+      period: month
+      annual_discount: 10%
+    quota:
+      monthly_calls: 5000000
+      assets: all
+      historical_data: "Full 13+ years"
+    features:
+      - Update interval up to 3 minutes
+      - 24-hour support response
+      - Full OHLCV history
+      - All assets
+
+  - name: Ultimate
+    description: Premium plan with 10 million calls, WebSocket real-time tickers, and 1-minute update intervals.
+    url: https://coinpaprika.com/api/pricing
+    price:
+      amount: 1499
+      currency: USD
+      period: month
+      annual_discount: 10%
+    quota:
+      monthly_calls: 10000000
+      assets: all
+      historical_data: "Full 13+ years"
+    features:
+      - WebSocket real-time ticker access
+      - Update interval up to 1 minute
+      - 24-hour support response
+      - All assets and full history
+
+  - name: Enterprise
+    description: Unlimited calls with dedicated infrastructure, SLA guarantees, and real-time Slack support.
+    url: https://coinpaprika.com/api/pricing
+    price:
+      amount: custom
+      currency: USD
+      period: month
+    quota:
+      monthly_calls: unlimited
+      assets: all
+      historical_data: "Full 13+ years"
+    features:
+      - 99.9% uptime SLA
+      - Dedicated IT infrastructure
+      - Real-time Slack support channel
+      - WebSocket access
+      - Custom rate limits
+      - Response time guarantees
+</content>
+</invoke>

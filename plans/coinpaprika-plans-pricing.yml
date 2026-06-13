@@ -1,0 +1,55 @@
+name: CoinPaprika API FinOps
+description: Financial operations guidance for managing CoinPaprika API costs, optimizing call usage, and selecting the appropriate plan based on consumption needs.
+url: https://coinpaprika.com/api/pricing
+guidance:
+  - name: Start with the Free Tier
+    description: The free tier provides 20,000 calls/month with no credit card required, covering 2,000 assets and 1 year of historical data — sufficient for prototyping and personal projects.
+    recommendation: Begin on the free tier and monitor monthly call consumption before committing to a paid plan.
+  - name: Annual Discount
+    description: CoinPaprika offers a 10% discount on all paid plans when prepaid annually.
+    recommendation: If usage patterns are stable and predictable, opt for annual billing to reduce costs by 10%.
+  - name: Monitor Quota with Key Info Endpoint
+    description: Use the /key/info endpoint to programmatically check remaining monthly quota and avoid unexpected overage or service interruption.
+    recommendation: Build quota monitoring into your application to trigger alerts before hitting monthly limits.
+  - name: Cache Responses Where Possible
+    description: Coin data, exchange lists, and ticker snapshots do not change every second. Caching responses locally reduces redundant API calls and stays within quota limits.
+    recommendation: Cache endpoint responses for 60–300 seconds depending on data freshness requirements.
+  - name: Use Bulk Endpoints
+    description: The /tickers endpoint returns all coin tickers in a single call rather than individual calls per coin. Use bulk endpoints to minimize API call count.
+    recommendation: Prefer /tickers (all coins) over /tickers/{coin_id} (per coin) when querying multiple coins simultaneously.
+  - name: Evaluate WebSocket for Real-Time Needs
+    description: For real-time price data applications, WebSocket access (Ultimate/Enterprise) is more cost-effective than polling REST endpoints at high frequency.
+    recommendation: If update frequency requirements are under 1 minute, evaluate the Ultimate plan ($1,499/mo) vs. polling costs at the Pro or Business tier.
+  - name: Right-Size Historical Data Requirements
+    description: Paid plan tiers differ in historical OHLCV data depth. Starter provides 5 years; Pro and above provide full history (13+ years). Avoid over-provisioning if only recent data is needed.
+    recommendation: Assess whether 1-year (Free) or 5-year (Starter) history meets requirements before upgrading to Pro or higher for full history.
+cost_structure:
+  model: subscription
+  billing_periods:
+    - monthly
+    - annual
+  currency: USD
+  tiers:
+    - plan: Free
+      monthly_cost: 0
+      annual_cost: 0
+    - plan: Starter
+      monthly_cost: 99
+      annual_cost: 1069.20
+    - plan: Pro
+      monthly_cost: 199
+      annual_cost: 2149.20
+    - plan: Business
+      monthly_cost: 799
+      annual_cost: 8629.20
+    - plan: Ultimate
+      monthly_cost: 1499
+      annual_cost: 16189.20
+    - plan: Enterprise
+      monthly_cost: custom
+      annual_cost: custom
+  payment_options:
+    - Credit/Debit Card
+    - Cryptocurrency (paid plans only)
+</content>
+</invoke>
