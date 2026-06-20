@@ -1,7 +1,7 @@
 aid: coinpaprika
 name: CoinPaprika
 description: Free cryptocurrency data REST API providing coin information, exchanges, market data, OHLCV history, ICO data, and global market statistics for 2,000+ coins on the free tier and 59,000+ assets on paid plans.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/coinpaprika/refs/heads/main/apis.yml
 type: Index
 created: '2026-06-13'
