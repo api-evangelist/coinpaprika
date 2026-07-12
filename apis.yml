@@ -30,6 +30,10 @@ apis:
       - type: OpenAPI
         url: https://github.com/coinpaprika/api/blob/master/openapi.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/coinpaprika-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/coinpaprika-domain-security.yml
   - type: Website
     url: https://coinpaprika.com/
   - type: Documentation
