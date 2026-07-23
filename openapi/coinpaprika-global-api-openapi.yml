@@ -1,0 +1,50 @@
+swagger: '2.0'
+info:
+  x-logo:
+    url: https://coinpaprika.com/static/files/d6d3c6e3.svg#greywizard/rock-coin-web/assets/coin/img/cp-logo-beta.svg
+    backgroundColor: '#FFFFFF'
+  description: "Coinpaprika API delivers free & frequently updated market data from the world of crypto: coin prices, volumes, market caps, ATHs, return rates and more.\n# Clients\n* [PHP](https://github.com/coinpaprika/coinpaprika-api-php-client)\n* [NodeJS](https://github.com/coinpaprika/coinpaprika-api-nodejs-client)\n* [GO](https://github.com/coinpaprika/coinpaprika-api-go-client)\n* [Swift](https://github.com/coinpaprika/coinpaprika-api-swift-client)\n* Community Contributed Clients:\n  * [C#](https://github.com/MSiccDev/CoinpaprikaAPI)\n# General\n* The base endpoint is: https://api.coinpaprika.com/v1/\n* All endpoints return either a JSON object or array\n* All timestamp related fields are in seconds\n# Errors\n* API errors are formatted as JSON:\n```{\"error\": \"<error message>\"}```\n* HTTP 4XX return codes are used for invalid requests - the issue is on the sender's side\n* HTTP 429 return code is used when breaking a request rate limit\n* HTTP 5XX return codes are used for internal errors - the issue is on coinpaprika's side\n# Rate limit\n* Single IP address can send less than 10 requests per second\n"
+  version: 1.2.1
+  title: Coinpaprika coins global API
+host: api.coinpaprika.com
+basePath: /v1
+schemes:
+- https
+tags:
+- name: global
+paths:
+  /global:
+    get:
+      tags:
+      - global
+      summary: Get global information
+      produces:
+      - application/json
+      responses:
+        200:
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Global'
+        429:
+          description: too many requests
+definitions:
+  Global:
+    type: object
+    properties:
+      market_cap_usd:
+        type: number
+        example: 430252937008
+      volume_24h_usd:
+        type: number
+        example: 430252937008
+      bitcoin_dominance_percentage:
+        type: number
+        example: 36.67
+      cryptocurrencies_number:
+        type: integer
+        example: 1587
+      last_updated:
+        type: integer
+        example: 1525089441

@@ -1,0 +1,145 @@
+swagger: '2.0'
+info:
+  x-logo:
+    url: https://coinpaprika.com/static/files/d6d3c6e3.svg#greywizard/rock-coin-web/assets/coin/img/cp-logo-beta.svg
+    backgroundColor: '#FFFFFF'
+  description: "Coinpaprika API delivers free & frequently updated market data from the world of crypto: coin prices, volumes, market caps, ATHs, return rates and more.\n# Clients\n* [PHP](https://github.com/coinpaprika/coinpaprika-api-php-client)\n* [NodeJS](https://github.com/coinpaprika/coinpaprika-api-nodejs-client)\n* [GO](https://github.com/coinpaprika/coinpaprika-api-go-client)\n* [Swift](https://github.com/coinpaprika/coinpaprika-api-swift-client)\n* Community Contributed Clients:\n  * [C#](https://github.com/MSiccDev/CoinpaprikaAPI)\n# General\n* The base endpoint is: https://api.coinpaprika.com/v1/\n* All endpoints return either a JSON object or array\n* All timestamp related fields are in seconds\n# Errors\n* API errors are formatted as JSON:\n```{\"error\": \"<error message>\"}```\n* HTTP 4XX return codes are used for invalid requests - the issue is on the sender's side\n* HTTP 429 return code is used when breaking a request rate limit\n* HTTP 5XX return codes are used for internal errors - the issue is on coinpaprika's side\n# Rate limit\n* Single IP address can send less than 10 requests per second\n"
+  version: 1.2.1
+  title: Coinpaprika coins search API
+host: api.coinpaprika.com
+basePath: /v1
+schemes:
+- https
+tags:
+- name: search
+paths:
+  /search/:
+    get:
+      tags:
+      - search
+      summary: Search for currencies/icos/people/exchanges/tags
+      produces:
+      - application/json
+      parameters:
+      - name: q
+        in: query
+        required: true
+        description: phrase for search eg. `btc`
+        type: string
+      - name: c
+        in: query
+        required: false
+        description: 'one or more categories (comma separated) to search. Available options: `currencies|exchanges|icos|people|tags`'
+        default: currencies,exchanges,icos,people,tags
+        type: string
+      - name: limit
+        in: query
+        required: false
+        description: limit of results per category (max 250)
+        default: 6
+        type: integer
+      responses:
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/SearchResults'
+        429:
+          description: too many requests
+        400:
+          description: invalid parameters
+definitions:
+  Coin:
+    type: object
+    properties:
+      id:
+        type: string
+        example: btc-bitcoin
+      name:
+        type: string
+        example: Bitcoin
+      symbol:
+        type: string
+        example: BTC
+      rank:
+        type: integer
+        example: 1
+      is_new:
+        type: boolean
+        example: false
+        description: If currency was added within last 5 days
+      is_active:
+        type: boolean
+        example: true
+  SearchResults:
+    type: object
+    properties:
+      currencies:
+        type: array
+        items:
+          $ref: '#/definitions/Coin'
+      icos:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+              example: fil-filecoin-futures
+            name:
+              type: string
+              example: Filecoin
+            symbol:
+              type: string
+              example: FIL
+            is_new:
+              type: boolean
+              example: false
+              description: If ico was added within last 5 days
+      exchanges:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+              example: binance
+            name:
+              type: string
+              example: Binance
+            rank:
+              type: integer
+              example: 1
+      people:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+              example: vitalik-buterin
+            name:
+              type: string
+              example: Vitalik Buterin
+            teams_count:
+              type: integer
+              example: 5
+              description: Number of teams where person is a member
+      tags:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+              example: blockchain-service
+            name:
+              type: string
+              example: Blockchain Service
+            coin_counter:
+              type: integer
+              example: 160
+              description: Number of currencies with this tag
+            ico_counter:
+              type: integer
+              example: 80
+              description: Number of icos with this tag
