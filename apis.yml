@@ -1,7 +1,18 @@
 aid: coinpaprika
 name: CoinPaprika
 description: Free cryptocurrency data REST API providing coin information, exchanges, market data, OHLCV history, ICO data, and global market statistics for 2,000+ coins on the free tier and 59,000+ assets on paid plans.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coinpaprika.png
 url: https://raw.githubusercontent.com/api-evangelist/coinpaprika/refs/heads/main/apis.yml
 type: Index
 created: '2026-06-13'
@@ -15,20 +26,54 @@ tags:
   - Exchanges
   - Blockchain
 apis:
-  - name: CoinPaprika API
-    description: REST API providing real-time and historical cryptocurrency market data including coin prices, OHLCV candlestick data, exchange listings, contract addresses, global market statistics, and ICO information across 59,000+ assets and 360+ exchanges.
-    humanURL: https://docs.coinpaprika.com/
-    baseURL: https://api.coinpaprika.com/v1
-    tags:
-      - Cryptocurrency
-      - Market Data
-      - OHLCV
-      - Exchanges
-    properties:
-      - type: Documentation
-        url: https://docs.coinpaprika.com/
-      - type: OpenAPI
-        url: https://github.com/coinpaprika/api/blob/master/openapi.yml
+- aid: coinpaprika:coinpaprika-coins-api
+  name: CoinPaprika coins API
+  description: The coins API from CoinPaprika — 1 operation(s) for coins.
+  humanURL: https://docs.coinpaprika.com/
+  baseURL: https://api.coinpaprika.com/v1
+  tags:
+  - coins
+  properties:
+  - type: OpenAPI
+    url: openapi/coinpaprika-coins-api-openapi.yml
+  - type: Documentation
+    url: https://docs.coinpaprika.com/
+- aid: coinpaprika:coinpaprika-global-api
+  name: CoinPaprika global API
+  description: The global API from CoinPaprika — 1 operation(s) for global.
+  humanURL: https://docs.coinpaprika.com/
+  baseURL: https://api.coinpaprika.com/v1
+  tags:
+  - global
+  properties:
+  - type: OpenAPI
+    url: openapi/coinpaprika-global-api-openapi.yml
+  - type: Documentation
+    url: https://docs.coinpaprika.com/
+- aid: coinpaprika:coinpaprika-search-api
+  name: CoinPaprika search API
+  description: The search API from CoinPaprika — 1 operation(s) for search.
+  humanURL: https://docs.coinpaprika.com/
+  baseURL: https://api.coinpaprika.com/v1
+  tags:
+  - search
+  properties:
+  - type: OpenAPI
+    url: openapi/coinpaprika-search-api-openapi.yml
+  - type: Documentation
+    url: https://docs.coinpaprika.com/
+- aid: coinpaprika:coinpaprika-ticker-api
+  name: CoinPaprika ticker API
+  description: The ticker API from CoinPaprika — 2 operation(s) for ticker.
+  humanURL: https://docs.coinpaprika.com/
+  baseURL: https://api.coinpaprika.com/v1
+  tags:
+  - ticker
+  properties:
+  - type: OpenAPI
+    url: openapi/coinpaprika-ticker-api-openapi.yml
+  - type: Documentation
+    url: https://docs.coinpaprika.com/
 common:
   - type: AgenticAccess
     url: agentic-access/coinpaprika-agentic-access.yml
