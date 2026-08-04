@@ -1,0 +1,20 @@
+{
+  "provider": "coinpaprika",
+  "sources": [
+    "coinpaprika-coins-api-openapi.yml",
+    "coinpaprika-global-api-openapi.yml",
+    "coinpaprika-search-api-openapi.yml",
+    "coinpaprika-ticker-api-openapi.yml"
+  ],
+  "outputs": [
+    "coinpaprika-coins-api-openapi.yml",
+    "coinpaprika-global-api-openapi.yml",
+    "coinpaprika-search-api-openapi.yml",
+    "coinpaprika-ticker-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
