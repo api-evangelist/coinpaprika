@@ -1,0 +1,128 @@
+{
+  "item": [
+    {
+      "id": "9a25c65c-e582-4e05-80da-95b5813ee9df",
+      "name": "global",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9764317d-0fb1-454b-8dd4-70450189a057",
+          "name": "Get global information",
+          "request": {
+            "name": "Get global information",
+            "description": {},
+            "url": {
+              "path": [
+                "global"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9d887964-38b2-4597-8ee4-ad9fe5d6991e",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "global"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"market_cap_usd\": 430252937008,\n    \"volume_24h_usd\": 430252937008,\n    \"bitcoin_dominance_percentage\": 36.67,\n    \"cryptocurrencies_number\": 1587,\n    \"last_updated\": 1525089441\n  },\n  {\n    \"market_cap_usd\": 430252937008,\n    \"volume_24h_usd\": 430252937008,\n    \"bitcoin_dominance_percentage\": 36.67,\n    \"cryptocurrencies_number\": 1587,\n    \"last_updated\": 1525089441\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1748e373-8fc7-4269-a54f-ce99f7bb4d6b",
+              "name": "too many requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "global"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.coinpaprika.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1a8671a3-363f-42b4-991e-9c4413be26a4",
+    "name": "Coinpaprika coins global API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Coinpaprika API delivers free & frequently updated market data from the world of crypto: coin prices, volumes, market caps, ATHs, return rates and more.\n# Clients\n* [PHP](https://github.com/coinpaprika/coinpaprika-api-php-client)\n* [NodeJS](https://github.com/coinpaprika/coinpaprika-api-nodejs-client)\n* [GO](https://github.com/coinpaprika/coinpaprika-api-go-client)\n* [Swift](https://github.com/coinpaprika/coinpaprika-api-swift-client)\n* Community Contributed Clients:\n  * [C#](https://github.com/MSiccDev/CoinpaprikaAPI)\n# General\n* The base endpoint is: https://api.coinpaprika.com/v1/\n* All endpoints return either a JSON object or array\n* All timestamp related fields are in seconds\n# Errors\n* API errors are formatted as JSON:\n```{\"error\": \"<error message>\"}```\n* HTTP 4XX return codes are used for invalid requests - the issue is on the sender's side\n* HTTP 429 return code is used when breaking a request rate limit\n* HTTP 5XX return codes are used for internal errors - the issue is on coinpaprika's side\n# Rate limit\n* Single IP address can send less than 10 requests per second\n",
+      "type": "text/plain"
+    }
+  }
+}

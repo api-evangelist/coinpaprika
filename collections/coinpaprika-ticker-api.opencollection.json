@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Coinpaprika coins ticker API",
+    "version": "1.2.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ticker",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get ticker information for all coins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/ticker"
+          },
+          "docs": "Get ticker information for all coins"
+        },
+        {
+          "info": {
+            "name": "Get ticker information for specific coin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/ticker/:coin_id",
+            "params": [
+              {
+                "name": "coin_id",
+                "value": "",
+                "type": "path",
+                "description": "ID of coin to return e.g. btc-bitcoin, eth-ethereum"
+              }
+            ]
+          },
+          "docs": "Get ticker information for specific coin"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

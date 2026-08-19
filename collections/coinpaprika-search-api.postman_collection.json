@@ -1,0 +1,219 @@
+{
+  "item": [
+    {
+      "id": "319b4007-93ec-471d-8841-875797abf9cd",
+      "name": "search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ccd666a7-8f5d-48e9-82d7-d8ff299938b4",
+          "name": "Search for currencies/icos/people/exchanges/tags",
+          "request": {
+            "name": "Search for currencies/icos/people/exchanges/tags",
+            "description": {},
+            "url": {
+              "path": [
+                "search",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) phrase for search eg. `btc`"
+                },
+                {
+                  "disabled": false,
+                  "key": "c",
+                  "value": "currencies,exchanges,icos,people,tags",
+                  "description": "one or more categories (comma separated) to search. Available options: `currencies|exchanges|icos|people|tags`"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "6",
+                  "description": "limit of results per category (max 250)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4b27f496-7c9c-4b6f-aba2-4ef78802c6fb",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "c",
+                      "value": "currencies,exchanges,icos,people,tags"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "6"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"currencies\": [\n    {\n      \"id\": \"btc-bitcoin\",\n      \"name\": \"Bitcoin\",\n      \"symbol\": \"BTC\",\n      \"rank\": 1,\n      \"is_new\": false,\n      \"is_active\": true\n    },\n    {\n      \"id\": \"btc-bitcoin\",\n      \"name\": \"Bitcoin\",\n      \"symbol\": \"BTC\",\n      \"rank\": 1,\n      \"is_new\": false,\n      \"is_active\": true\n    }\n  ],\n  \"icos\": [\n    {\n      \"id\": \"fil-filecoin-futures\",\n      \"name\": \"Filecoin\",\n      \"symbol\": \"FIL\",\n      \"is_new\": false\n    },\n    {\n      \"id\": \"fil-filecoin-futures\",\n      \"name\": \"Filecoin\",\n      \"symbol\": \"FIL\",\n      \"is_new\": false\n    }\n  ],\n  \"exchanges\": [\n    {\n      \"id\": \"binance\",\n      \"name\": \"Binance\",\n      \"rank\": 1\n    },\n    {\n      \"id\": \"binance\",\n      \"name\": \"Binance\",\n      \"rank\": 1\n    }\n  ],\n  \"people\": [\n    {\n      \"id\": \"vitalik-buterin\",\n      \"name\": \"Vitalik Buterin\",\n      \"teams_count\": 5\n    },\n    {\n      \"id\": \"vitalik-buterin\",\n      \"name\": \"Vitalik Buterin\",\n      \"teams_count\": 5\n    }\n  ],\n  \"tags\": [\n    {\n      \"id\": \"blockchain-service\",\n      \"name\": \"Blockchain Service\",\n      \"coin_counter\": 160,\n      \"ico_counter\": 80\n    },\n    {\n      \"id\": \"blockchain-service\",\n      \"name\": \"Blockchain Service\",\n      \"coin_counter\": 160,\n      \"ico_counter\": 80\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "616d66c0-8c15-4d17-ac0b-c69fd5caf87c",
+              "name": "invalid parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "c",
+                      "value": "currencies,exchanges,icos,people,tags"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "6"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "87d7deb6-fd27-4461-b217-9adfd70d322e",
+              "name": "too many requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "c",
+                      "value": "currencies,exchanges,icos,people,tags"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "6"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.coinpaprika.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "539d5133-dc51-43ba-a8b5-de4dd887454c",
+    "name": "Coinpaprika coins search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Coinpaprika API delivers free & frequently updated market data from the world of crypto: coin prices, volumes, market caps, ATHs, return rates and more.\n# Clients\n* [PHP](https://github.com/coinpaprika/coinpaprika-api-php-client)\n* [NodeJS](https://github.com/coinpaprika/coinpaprika-api-nodejs-client)\n* [GO](https://github.com/coinpaprika/coinpaprika-api-go-client)\n* [Swift](https://github.com/coinpaprika/coinpaprika-api-swift-client)\n* Community Contributed Clients:\n  * [C#](https://github.com/MSiccDev/CoinpaprikaAPI)\n# General\n* The base endpoint is: https://api.coinpaprika.com/v1/\n* All endpoints return either a JSON object or array\n* All timestamp related fields are in seconds\n# Errors\n* API errors are formatted as JSON:\n```{\"error\": \"<error message>\"}```\n* HTTP 4XX return codes are used for invalid requests - the issue is on the sender's side\n* HTTP 429 return code is used when breaking a request rate limit\n* HTTP 5XX return codes are used for internal errors - the issue is on coinpaprika's side\n# Rate limit\n* Single IP address can send less than 10 requests per second\n",
+      "type": "text/plain"
+    }
+  }
+}

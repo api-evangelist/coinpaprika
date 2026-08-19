@@ -1,0 +1,49 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Coinpaprika coins search API",
+    "version": "1.2.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for currencies/icos/people/exchanges/tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/search/",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "phrase for search eg. `btc`"
+              },
+              {
+                "name": "c",
+                "value": "",
+                "type": "query",
+                "description": "one or more categories (comma separated) to search. Available options: `currencies|exchanges|icos|people|tags`"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "limit of results per category (max 250)"
+              }
+            ]
+          },
+          "docs": "Search for currencies/icos/people/exchanges/tags"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

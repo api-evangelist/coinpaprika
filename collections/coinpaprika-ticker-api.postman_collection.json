@@ -1,0 +1,289 @@
+{
+  "item": [
+    {
+      "id": "f5f3adc1-f65d-4ff8-a3ac-5219247d0410",
+      "name": "ticker",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f0632234-1f1f-409a-90e1-50776baf1032",
+          "name": "Get ticker information for all coins",
+          "request": {
+            "name": "Get ticker information for all coins",
+            "description": {},
+            "url": {
+              "path": [
+                "ticker"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "141de201-a71b-4479-9163-d8adc7ca0a13",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ticker"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"btc-bitcoin\",\n    \"name\": \"Bitcoin\",\n    \"symbol\": \"BTC\",\n    \"rank\": \"1\",\n    \"price_usd\": \"9259.01\",\n    \"price_btc\": \"1\",\n    \"volume_24h_usd\": \"8102619999\",\n    \"market_cap_usd\": \"157468557128\",\n    \"circulating_supply\": \"17007062\",\n    \"total_supply\": \"17007062\",\n    \"max_supply\": \"21000000\",\n    \"percent_change_1h\": \"-0.26\",\n    \"percent_change_24h\": \"0.22\",\n    \"percent_change_7d\": \"4.1\",\n    \"last_updated\": \"1525088839\"\n  },\n  {\n    \"id\": \"btc-bitcoin\",\n    \"name\": \"Bitcoin\",\n    \"symbol\": \"BTC\",\n    \"rank\": \"1\",\n    \"price_usd\": \"9259.01\",\n    \"price_btc\": \"1\",\n    \"volume_24h_usd\": \"8102619999\",\n    \"market_cap_usd\": \"157468557128\",\n    \"circulating_supply\": \"17007062\",\n    \"total_supply\": \"17007062\",\n    \"max_supply\": \"21000000\",\n    \"percent_change_1h\": \"-0.26\",\n    \"percent_change_24h\": \"0.22\",\n    \"percent_change_7d\": \"4.1\",\n    \"last_updated\": \"1525088839\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f207c134-45e1-4d9a-96d8-1da0708fcb95",
+              "name": "too many requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ticker"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f2295106-4a57-4dd0-b334-eee5a361007f",
+          "name": "Get ticker information for specific coin",
+          "request": {
+            "name": "Get ticker information for specific coin",
+            "description": {},
+            "url": {
+              "path": [
+                "ticker",
+                ":coin_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "coin_id",
+                  "description": "(Required) ID of coin to return e.g. btc-bitcoin, eth-ethereum"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d1d0f7eb-d478-47ea-b4b6-d75ac02c3174",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ticker",
+                    ":coin_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "coin_id",
+                      "description": "(Required) ID of coin to return e.g. btc-bitcoin, eth-ethereum"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"btc-bitcoin\",\n  \"name\": \"Bitcoin\",\n  \"symbol\": \"BTC\",\n  \"rank\": \"1\",\n  \"price_usd\": \"9259.01\",\n  \"price_btc\": \"1\",\n  \"volume_24h_usd\": \"8102619999\",\n  \"market_cap_usd\": \"157468557128\",\n  \"circulating_supply\": \"17007062\",\n  \"total_supply\": \"17007062\",\n  \"max_supply\": \"21000000\",\n  \"percent_change_1h\": \"-0.26\",\n  \"percent_change_24h\": \"0.22\",\n  \"percent_change_7d\": \"4.1\",\n  \"last_updated\": \"1525088839\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4dd90027-0e5f-4731-bdd4-ceff3d4b8193",
+              "name": "coin not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ticker",
+                    ":coin_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "coin_id",
+                      "description": "(Required) ID of coin to return e.g. btc-bitcoin, eth-ethereum"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b39dda44-4340-4e75-9d16-c18a855c3a43",
+              "name": "too many requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ticker",
+                    ":coin_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "coin_id",
+                      "description": "(Required) ID of coin to return e.g. btc-bitcoin, eth-ethereum"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.coinpaprika.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "972fe45b-d2cf-4fa6-b4d7-f4649ece1f94",
+    "name": "Coinpaprika coins ticker API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Coinpaprika API delivers free & frequently updated market data from the world of crypto: coin prices, volumes, market caps, ATHs, return rates and more.\n# Clients\n* [PHP](https://github.com/coinpaprika/coinpaprika-api-php-client)\n* [NodeJS](https://github.com/coinpaprika/coinpaprika-api-nodejs-client)\n* [GO](https://github.com/coinpaprika/coinpaprika-api-go-client)\n* [Swift](https://github.com/coinpaprika/coinpaprika-api-swift-client)\n* Community Contributed Clients:\n  * [C#](https://github.com/MSiccDev/CoinpaprikaAPI)\n# General\n* The base endpoint is: https://api.coinpaprika.com/v1/\n* All endpoints return either a JSON object or array\n* All timestamp related fields are in seconds\n# Errors\n* API errors are formatted as JSON:\n```{\"error\": \"<error message>\"}```\n* HTTP 4XX return codes are used for invalid requests - the issue is on the sender's side\n* HTTP 429 return code is used when breaking a request rate limit\n* HTTP 5XX return codes are used for internal errors - the issue is on coinpaprika's side\n# Rate limit\n* Single IP address can send less than 10 requests per second\n",
+      "type": "text/plain"
+    }
+  }
+}

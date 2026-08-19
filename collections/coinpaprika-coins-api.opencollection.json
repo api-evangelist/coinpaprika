@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Coinpaprika coins API",
+    "version": "1.2.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "coins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all coins listed on coinpaprika",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/coins"
+          },
+          "docs": "Get all coins listed on coinpaprika"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
