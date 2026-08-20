@@ -32,6 +32,8 @@ apis:
   humanURL: https://docs.coinpaprika.com/
   baseURL: https://api.coinpaprika.com/v1
   tags:
+  - Coins
+  tags_raw:
   - coins
   properties:
   - type: OpenAPI
@@ -44,6 +46,8 @@ apis:
   humanURL: https://docs.coinpaprika.com/
   baseURL: https://api.coinpaprika.com/v1
   tags:
+  - Global
+  tags_raw:
   - global
   properties:
   - type: OpenAPI
@@ -56,6 +60,8 @@ apis:
   humanURL: https://docs.coinpaprika.com/
   baseURL: https://api.coinpaprika.com/v1
   tags:
+  - Search
+  tags_raw:
   - search
   properties:
   - type: OpenAPI
@@ -68,6 +74,8 @@ apis:
   humanURL: https://docs.coinpaprika.com/
   baseURL: https://api.coinpaprika.com/v1
   tags:
+  - Ticker
+  tags_raw:
   - ticker
   properties:
   - type: OpenAPI
