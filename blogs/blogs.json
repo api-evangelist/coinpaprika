@@ -5,7 +5,7 @@
       "source": "https://coinpaprika.com/news/feed/",
       "feed_url": "https://coinpaprika.com/news/feed/",
       "title": "",
-      "saved": 2,
+      "saved": 4,
       "method": "feed"
     },
     {
@@ -16,6 +16,6 @@
       "method": "none"
     }
   ],
-  "fetched": "2026-08-15T12:22:01Z",
-  "post_count": 332
+  "fetched": "2026-08-22T20:20:02Z",
+  "post_count": 386
 }
