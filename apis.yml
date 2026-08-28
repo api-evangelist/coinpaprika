@@ -1,6 +1,18 @@
 aid: coinpaprika
 name: CoinPaprika
 description: Free cryptocurrency data REST API providing coin information, exchanges, market data, OHLCV history, ICO data, and global market statistics for 2,000+ coins on the free tier and 59,000+ assets on paid plans.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
