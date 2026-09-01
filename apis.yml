@@ -44,7 +44,7 @@ apis:
   humanURL: https://docs.coinpaprika.com/
   baseURL: https://api.coinpaprika.com/v1
   tags:
-  - coins
+  - Coins
   tags_raw:
   - coins
   properties:
@@ -86,7 +86,7 @@ apis:
   humanURL: https://docs.coinpaprika.com/
   baseURL: https://api.coinpaprika.com/v1
   tags:
-  - ticker
+  - Ticker
   tags_raw:
   - ticker
   properties:
