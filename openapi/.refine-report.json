@@ -1,10 +1,7 @@
 {
   "provider": "coinpaprika",
   "sources": [
-    "coinpaprika-coins-api-openapi.yml",
-    "coinpaprika-global-api-openapi.yml",
-    "coinpaprika-search-api-openapi.yml",
-    "coinpaprika-ticker-api-openapi.yml"
+    "_original/openapi.yml"
   ],
   "outputs": [
     "coinpaprika-coins-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.yml: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "coinpaprika-coins-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "coinpaprika-global-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "coinpaprika-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "coinpaprika-ticker-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
