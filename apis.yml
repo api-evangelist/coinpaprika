@@ -38,14 +38,12 @@ tags:
   - Market Data
   - Finance
   - OHLCV
-  - Exchange
   - Blockchain
 tags_raw:
   - Cryptocurrency
   - Market Data
   - Finance
   - OHLCV
-  - Exchanges
   - Blockchain
 apis:
 - aid: coinpaprika:coinpaprika-coins-api
@@ -136,3 +134,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-tags-removed:
+- Exchange
