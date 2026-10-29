@@ -1,4 +1,4 @@
-# CoinPaprika (coinpaprika)
+# CoinPaprika
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,51 +66,146 @@
 
 Free cryptocurrency data REST API providing coin information, exchanges, market data, OHLCV history, ICO data, and global market statistics for 2,000+ coins on the free tier and 59,000+ assets on paid plans.
 
-**APIs.yml:** [apis.yml](apis.yml)
+**Areas:** Cryptocurrency · Market Data · Finance · OHLCV · Blockchain
 
-## APIs
+## CoinPaprika on APIs.io
 
-- **CoinPaprika API** — [Documentation](https://docs.coinpaprika.com/) | [OpenAPI](https://github.com/coinpaprika/api/blob/master/openapi.yml)
-  - Base URL: `https://api.coinpaprika.com/v1`
-  - Covers coins, tickers, OHLCV, exchanges, contracts, global market data
+Everything profiled for CoinPaprika is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/coinpaprika/](https://apis.io/providers/coinpaprika/)** — or go straight to one of the APIs or properties below.
 
-## Common Resources
+### APIs (4)
 
-| Type | URL |
-|------|-----|
-| Website | https://coinpaprika.com/ |
-| Documentation | https://docs.coinpaprika.com/ |
-| GitHub Org | https://github.com/coinpaprika |
-| LinkedIn | https://www.linkedin.com/company/coinpaprika/ |
-| Blog / News | https://coinpaprika.com/news/ |
-| Pricing | https://coinpaprika.com/api/pricing |
-| Status Page | https://status.coinpaprika.com/ |
-| X (Twitter) | https://twitter.com/coinpaprika |
+- [CoinPaprika Coins API](https://apis.io/apis/coinpaprika/coinpaprika-coins-api/) — The coins API from CoinPaprika — 1 operation(s) for coins.
+- [CoinPaprika Global API](https://apis.io/apis/coinpaprika/coinpaprika-global-api/) — The global API from CoinPaprika — 1 operation(s) for global.
+- [CoinPaprika Search API](https://apis.io/apis/coinpaprika/coinpaprika-search-api/) — The search API from CoinPaprika — 1 operation(s) for search.
+- [CoinPaprika Ticker API](https://apis.io/apis/coinpaprika/coinpaprika-ticker-api/) — The ticker API from CoinPaprika — 2 operation(s) for ticker.
 
-## Plans & Pricing
+### Published properties
 
-| Plan | Monthly Cost | Monthly Calls | Assets |
-|------|-------------|---------------|--------|
-| Free | $0 | 20,000 | 2,000 |
-| Starter | $99 | 400,000 | All |
-| Pro | $199 | 1,000,000 | All |
-| Business | $799 | 5,000,000 | All |
-| Ultimate | $1,499 | 10,000,000 | All |
-| Enterprise | Custom | Unlimited | All |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-10% discount available for annual prepayment.
+#### Agentic access (1)
 
-See [plans/coinpaprika-plans-pricing.yml](plans/coinpaprika-plans-pricing.yml), [rate-limits/coinpaprika-rate-limits.yml](rate-limits/coinpaprika-rate-limits.yml), and [finops/coinpaprika-finops.yml](finops/coinpaprika-finops.yml) for detailed guidance.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-## Tags
+- [Coinpaprika Agentic Access](https://apis.io/agentic-access/coinpaprika/coinpaprika-agentic-access/)
 
-Cryptocurrency, Market Data, Finance, OHLCV, Exchanges, Blockchain
+#### JSON Schema (4)
 
-## Timestamps
+The data models the API reads and writes.
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+- [Coin](https://apis.io/schemas/coinpaprika/coin/)
+- [Global](https://apis.io/schemas/coinpaprika/global/)
+- [SearchResults](https://apis.io/schemas/coinpaprika/search-results/)
+- [Tick](https://apis.io/schemas/coinpaprika/tick/)
 
-## Maintainers
+#### Examples (4)
 
-- **Kin Lane** — kin@apievangelist.com
+Example requests and responses.
+
+- [Coin](https://apis.io/examples/coinpaprika/coin/)
+- [Global](https://apis.io/examples/coinpaprika/global/)
+- [Search Results](https://apis.io/examples/coinpaprika/search-results/)
+- [Tick](https://apis.io/examples/coinpaprika/tick/)
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [Coinpaprika coins API](https://apis.io/collections/coinpaprika/open-coinpaprika-coins-api/)
+- [Coinpaprika coins global API](https://apis.io/collections/coinpaprika/open-coinpaprika-global-api/)
+- [Coinpaprika coins search API](https://apis.io/collections/coinpaprika/open-coinpaprika-search-api/)
+- [Coinpaprika coins ticker API](https://apis.io/collections/coinpaprika/open-coinpaprika-ticker-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [CoinPaprika — jsonschema rules](https://apis.io/rules/coinpaprika/coinpaprika-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Coinpaprika Domain Security](https://apis.io/security/coinpaprika/coinpaprika-domain-security/)
+- [Coinpaprika Vulnerability Disclosure](https://apis.io/security/coinpaprika/coinpaprika-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Coinpaprika Plans Pricing](https://apis.io/plans/coinpaprika/coinpaprika-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Coinpaprika Rate Limits](https://apis.io/rate-limits/coinpaprika/coinpaprika-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Coinpaprika Finops](https://apis.io/finops/coinpaprika/coinpaprika-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://coinpaprika.com/)
+- [Documentation](https://docs.coinpaprika.com/)
+- [Pricing](https://coinpaprika.com/api/pricing)
+- [Blog](https://coinpaprika.com/news/)
+- [Status](https://status.coinpaprika.com/)
+
+## API Evangelist rating
+
+**Kin Score 23.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 38.0 |
+| Contract governance | 9.8 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 10.5 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/coinpaprika/](https://apis.io/providers/coinpaprika/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CoinPaprika: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/coinpaprika/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
